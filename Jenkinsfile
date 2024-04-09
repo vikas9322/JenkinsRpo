@@ -1,4 +1,4 @@
-pipeling {
+pipeline {
 
 	agent any 
 
