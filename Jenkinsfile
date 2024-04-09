@@ -10,6 +10,12 @@ pipeline {
 		}
 
 		stage("test"){
+
+			when{
+				expression {
+					BRANCH_NAME == 'master'
+				}
+			}
 			steps{
 				echo 'This is a test step'
 			}
