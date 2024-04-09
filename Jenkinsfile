@@ -25,13 +25,13 @@ pipeline {
 
 	post {
 		always {
-			'This is a always block'
+			echo 'This is a always block'
 		}
 		success{
-			'This is a success block'
+			echo 'This is a success block'
 		}
 		failure{
-			'This is a failure block'
+			echo 'This is a failure block'
 		}
 	}
 }
