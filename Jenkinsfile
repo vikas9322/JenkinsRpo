@@ -1,3 +1,6 @@
+def gv 
+
+
 pipeline {
 
 	agent any 
@@ -18,8 +21,18 @@ pipeline {
 	}
 
 	stages {
+		stage("init"){
+			steps{
+				script{
+					gv = load "script.groovy"
+				}
+			}
+		}
 		stage("build"){
 			steps{
+				script{
+					gv.functionName()
+				}
 				echo 'This is a buils step'
 				echo "This is my variable ${TEST}"
 			}
